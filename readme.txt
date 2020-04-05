@@ -1,0 +1,1 @@
+Theme with pagination and basic style
