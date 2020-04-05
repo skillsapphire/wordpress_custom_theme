@@ -1,10 +1,18 @@
 <?php
-    function wpct_assets(){
+    require_once('bs4navwalker.php');
+
+    function wpct_assets_css(){
+        wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
         wp_enqueue_style('style', get_stylesheet_uri());
     }
-    add_action('wp_enqueue_scripts', 'wpct_assets');
+    add_action('wp_enqueue_scripts', 'wpct_assets_css');
 
+    function wpct_assets_scripts() {
+        wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/vendor/bootstrap.bundle.min.js', array( 'jquery' ) );
+      }
+    add_action( 'wp_enqueue_scripts', 'wpct_assets_scripts');
 
+    register_nav_menus( [ 'primary' => __( 'Primary Menu' ) ] );
 
 
 

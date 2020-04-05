@@ -4,11 +4,11 @@ Author: Skillsapphire
 Author URI: https://skillsapphire.com
 Version: 1.0
  */
-
+ @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
  body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: #545454;
+    padding-top: 4.5rem;
+    font-family: Arial,sans-serif;
+    color: #001A33;
 }
  
 a:link, a:visited {
