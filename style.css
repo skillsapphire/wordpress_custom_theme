@@ -84,7 +84,7 @@ ul.page-numbers li {
 .page-numbers.current,
 .page-numbers.current:hover {
     color: #000;
-    background: #f7f7f7;
+    background: #007bff;
     text-decoration: none;
 }
 
