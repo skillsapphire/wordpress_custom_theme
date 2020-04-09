@@ -4,9 +4,10 @@
 get_header();
 
 /**
- * Setup query to show the ‘services’ post type with ‘8’ posts.
+ * Setup query to show the doctor post type with ‘8’ posts.
  * Output the title with an excerpt.
  */
+
 $args = array(  
     'post_type' => 'doctor',
     'post_status' => 'publish',
@@ -14,10 +15,10 @@ $args = array(
     'orderby' => 'title', 
     'order' => 'ASC', 
 );
-$loop = new WP_Query( $args );
+$listingloop = new WP_Query( $args );
 
-    if($loop->have_posts()):
-        while(have_posts()): $loop->the_post(); 
+    if($listingloop->have_posts()):
+        while($listingloop->have_posts()): $listingloop->the_post(); 
 ?>
     <article class="wpct-post">
     <h1>
@@ -25,10 +26,11 @@ $loop = new WP_Query( $args );
     </h1>
     </article>
 <?php   endwhile;
+        wp_reset_postdata();
     else:
         echo "No listing found";
 
-    endif;
+    endif; 
     wpct_pagination();
 get_footer();
 

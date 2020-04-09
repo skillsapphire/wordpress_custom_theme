@@ -38,5 +38,5 @@
     ]);
   ?>
 </nav>
-
+<?php get_search_form(); ?>
  <div class="container">
